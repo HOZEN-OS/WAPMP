@@ -12,24 +12,24 @@ XAMPPみたいな感じです。
 
 ディレクトリ構成例
 
-WAPMP/
- ├ diskw/ ※
- │ ├ conf/ ※
- │ │ ├ httpd.conf
- │ │ ├ my.ini
- │ │ └ php.ini
- │ ├ EXE/
- │ │　├ Apache24/
- │ │　├ php8/
- │ │　├ mysql/
- │ │　└ share/
- │ ├ tmp/ ※
- │ │ ├ access.log
- │ │ └ error.log
- │ └ www/
- ├ WAPMP.exe
- └ WAPMP.ini
-
+WAPMP/  
+ ├ diskw/ ※  
+ │ ├ conf/ ※  
+ │ │ ├ httpd.conf  
+ │ │ ├ my.ini  
+ │ │ └ php.ini  
+ │ ├ EXE/  
+ │ │　├ Apache24/  
+ │ │　├ php8/  
+ │ │　├ mysql/  
+ │ │　└ share/  
+ │ ├ tmp/ ※  
+ │ │ ├ access.log  
+ │ │ └ error.log  
+ │ └ www/  
+ ├ WAPMP.exe  
+ └ WAPMP.ini  
+  
 ※ 必須のディレクトリです。
 
 diskwディレクトリをwドライブとしてマウントします。※wは変更可能です。
