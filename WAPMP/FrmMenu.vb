@@ -47,17 +47,20 @@ Public Class FrmMenu
 
             If INI.MYSQL = 1 Then
                 If MySQL.StartUp() Then
+                    MySQLToolStripMenuItem.Enabled = True
                     MySQLStartSuccess()
                 End If
             End If
 
             If INI.POSTGRESQL = 1 Then
+                PostgreSQLToolStripMenuItem.Visible = True
                 If PostgreSQL.StartUp() Then
                     PgSQLStartSuccess()
                 End If
             End If
 
             If INI.APACHE = 1 Then
+                ApacheToolStripMenuItem.Enabled = True
                 If Apache.StartUp() Then
                     ApacheStartSuccess()
                 End If
@@ -67,7 +70,7 @@ Public Class FrmMenu
                 Threading.Thread.Sleep(INI.WAITTIME)
                 Process.Start(INI.TOPPAGE_URL)
             End If
-
+            Menu_Home.Enabled = True
             ToolStripMenuItem1.Enabled = True
         Else
             DefIni()
@@ -99,7 +102,6 @@ Public Class FrmMenu
     End Sub
 
     Private Sub PgSQLStartSuccess()
-        PostgreSQLToolStripMenuItem.Visible = True
         Menu_PgSQLStart.Enabled = False
         Menu_PgSQLStop.Enabled = True
         Menu_PgSQLRestart.Enabled = True
